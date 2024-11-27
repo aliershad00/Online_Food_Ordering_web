@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const API_URL = "http://localhost:5454";
+export const API_URL = "https://online-food-ordering-web.vercel.app/";
 
 
 export const api = axios.create({
-  baseURL: API_URL, 
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
