@@ -6,13 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 // const PORT = process.env.PORT || 3000;
 
-app.use(cors(
-    {
-        origin: ["https://online-food-ordering-web-front.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+app.use(cors())
 
 // Middleware
 app.use(bodyParser.json());

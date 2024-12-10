@@ -16,12 +16,12 @@ const client = new MongoClient(uri, {
 });
 
 async function connectToDB() {
-  // try {
-  //   await client.connect();
-  //   console.log("Connected to MongoDB");
-  // } catch (err) {
-  //   console.error("Failed to connect to MongoDB", err);
-  // }
+  try {
+    await client.connect();
+    console.log("Connected to MongoDB");
+  } catch (err) {
+    console.error("Failed to connect to MongoDB", err);
+  }
   return mongoose.connect(uri)
 }
 
