@@ -7,10 +7,10 @@ const app = express();
 // const PORT = process.env.PORT || 3000;
 
 // app.use(cors())
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: `${process.env.FRONTEND_URL } || http://localhost:3000` }));
 
 // Middleware
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(express.json());
 
 const homeRouter = require("./routes/home.router.js")
@@ -64,4 +64,4 @@ app.use("/api/admin/events", adminEventRoutes)
 
 
 
-module.exports = { app };
+export default app
